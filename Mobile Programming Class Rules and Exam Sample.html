@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Programming Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .question {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 600px;
+            text-align: left;
+        }
+        .question h3 {
+            margin-top: 0;
+            color: #555;
+        }
+        .options {
+            margin: 10px 0;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+        }
+        .result {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .correct {
+            color: green;
+        }
+        .wrong {
+            color: red;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .essay-question {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 600px;
+            text-align: left;
+        }
+        .essay-question h3 {
+            margin-top: 0;
+            color: #555;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mobile Programming Exam</h1>
+
+    <!-- Multiple Choice Questions -->
+<!-- Lecture 1: Mobile Programming Basics -->
+<div class="question" data-lecture="Lecture 1">
+    <h3>1. ......,I am gay?</h3>
+    <div class="options">
+        <label><input type="radio" name="q1" value="a"> yas</label>
+        <label><input type="radio" name="q1" value="b"> mohamed</label>
+        <label><input type="radio" name="q1" value="c"> maybe</label>
+        <label><input type="radio" name="q1" value="d"> no Choice</label>
+    </div>
+    <div class="result" id="result1"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 1">
+    <h3>2. Which of the following is NOT a type of mobile application?</h3>
+    <div class="options">
+        <label><input type="radio" name="q2" value="a"> Native Apps</label>
+        <label><input type="radio" name="q2" value="b"> Hybrid Apps</label>
+        <label><input type="radio" name="q2" value="c"> Web Apps</label>
+        <label><input type="radio" name="q2" value="d"> Desktop Apps</label>
+    </div>
+    <div class="result" id="result2"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 1">
+    <h3>3. Which platform is known for its strict app store guidelines?</h3>
+    <div class="options">
+        <label><input type="radio" name="q3" value="a"> Android</label>
+        <label><input type="radio" name="q3" value="b"> iOS</label>
+        <label><input type="radio" name="q3" value="c"> Windows Mobile</label>
+        <label><input type="radio" name="q3" value="d"> Blackberry</label>
+    </div>
+    <div class="result" id="result3"></div>
+</div>
+
+<!-- Lecture 2: Fundamentals of Mobile Computing -->
+<div class="question" data-lecture="Lecture 2">
+    <h3>4. What is the primary feature of mobile computing?</h3>
+    <div class="options">
+        <label><input type="radio" name="q4" value="a"> Mobility</label>
+        <label><input type="radio" name="q4" value="b"> Connectivity</label>
+        <label><input type="radio" name="q4" value="c"> Real-time access</label>
+        <label><input type="radio" name="q4" value="d"> All of the above</label>
+    </div>
+    <div class="result" id="result4"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 2">
+    <h3>5. Which of the following is a limitation of mobile computing?</h3>
+    <div class="options">
+        <label><input type="radio" name="q5" value="a"> Range and bandwidth limitations</label>
+        <label><input type="radio" name="q5" value="b"> Security concerns</label>
+        <label><input type="radio" name="q5" value="c"> Power consumption</label>
+        <label><input type="radio" name="q5" value="d"> All of the above</label>
+    </div>
+    <div class="result" id="result5"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 2">
+    <h3>6. What is the future of mobile computing?</h3>
+    <div class="options">
+        <label><input type="radio" name="q6" value="a"> 5G Networks</label>
+        <label><input type="radio" name="q6" value="b"> AI in Mobile Devices</label>
+        <label><input type="radio" name="q6" value="c"> Wearable Technology</label>
+        <label><input type="radio" name="q6" value="d"> All of the above</label>
+    </div>
+    <div class="result" id="result6"></div>
+</div>
+
+<!-- Lecture 3: Mobile App Architecture -->
+<div class="question" data-lecture="Lecture 3">
+    <h3>7. Which architecture is commonly used in Android development?</h3>
+    <div class="options">
+        <label><input type="radio" name="q7" value="a"> MVC</label>
+        <label><input type="radio" name="q7" value="b"> MVVM</label>
+        <label><input type="radio" name="q7" value="c"> Clean Architecture</label>
+        <label><input type="radio" name="q7" value="d"> All of the above</label>
+    </div>
+    <div class="result" id="result7"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 3">
+    <h3>8. What is the purpose of the `onCreate()` method in Android?</h3>
+    <div class="options">
+        <label><input type="radio" name="q8" value="a"> To initialize the Activity</label>
+        <label><input type="radio" name="q8" value="b"> To start the Activity</label>
+        <label><input type="radio" name="q8" value="c"> To pause the Activity</label>
+        <label><input type="radio" name="q8" value="d"> To destroy the Activity</label>
+    </div>
+    <div class="result" id="result8"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 3">
+    <h3>9. Which method is called when an Activity is no longer visible?</h3>
+    <div class="options">
+        <label><input type="radio" name="q9" value="a"> `onStop()`</label>
+        <label><input type="radio" name="q9" value="b"> `onPause()`</label>
+        <label><input type="radio" name="q9" value="c"> `onDestroy()`</label>
+        <label><input type="radio" name="q9" value="d"> `onRestart()`</label>
+    </div>
+    <div class="result" id="result9"></div>
+</div>
+
+<!-- Lecture 4: User Interface Layout -->
+<div class="question" data-lecture="Lecture 4">
+    <h3>10. Which layout arranges its children in a single column or row?</h3>
+    <div class="options">
+        <label><input type="radio" name="q10" value="a"> LinearLayout</label>
+        <label><input type="radio" name="q10" value="b"> RelativeLayout</label>
+        <label><input type="radio" name="q10" value="c"> FrameLayout</label>
+        <label><input type="radio" name="q10" value="d"> TableLayout</label>
+    </div>
+    <div class="result" id="result10"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 4">
+    <h3>11. What is the formula for converting dp units to screen pixels?</h3>
+    <div class="options">
+        <label><input type="radio" name="q11" value="a"> px = dp * (dpi / 160)</label>
+        <label><input type="radio" name="q11" value="b"> px = dp * (160 / dpi)</label>
+        <label><input type="radio" name="q11" value="c"> px = dp * dpi</label>
+        <label><input type="radio" name="q11" value="d"> px = dp + dpi</label>
+    </div>
+    <div class="result" id="result11"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 4">
+    <h3>12. Which layout is used to arrange views in relation to each other or the parent?</h3>
+    <div class="options">
+        <label><input type="radio" name="q12" value="a"> LinearLayout</label>
+        <label><input type="radio" name="q12" value="b"> RelativeLayout</label>
+        <label><input type="radio" name="q12" value="c"> FrameLayout</label>
+        <label><input type="radio" name="q12" value="d"> TableLayout</label>
+    </div>
+    <div class="result" id="result12"></div>
+</div>
+
+<!-- Lecture 5: Display Lists of Data -->
+<div class="question" data-lecture="Lecture 5">
+    <h3>13. Which widget is used to display a drop-down list in Android?</h3>
+    <div class="options">
+        <label><input type="radio" name="q13" value="a"> ListView</label>
+        <label><input type="radio" name="q13" value="b"> Spinner</label>
+        <label><input type="radio" name="q13" value="c"> RecyclerView</label>
+        <label><input type="radio" name="q13" value="d"> GridView</label>
+    </div>
+    <div class="result" id="result13"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 5">
+    <h3>14. Which adapter is commonly used with a ListView?</h3>
+    <div class="options">
+        <label><input type="radio" name="q14" value="a"> ArrayAdapter</label>
+        <label><input type="radio" name="q14" value="b"> BaseAdapter</label>
+        <label><input type="radio" name="q14" value="c"> RecyclerView.Adapter</label>
+        <label><input type="radio" name="q14" value="d"> All of the above</label>
+    </div>
+    <div class="result" id="result14"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 5">
+    <h3>15. What is the successor to ListView in Android?</h3>
+    <div class="options">
+        <label><input type="radio" name="q15" value="a"> Spinner</label>
+        <label><input type="radio" name="q15" value="b"> RecyclerView</label>
+        <label><input type="radio" name="q15" value="c"> GridView</label>
+        <label><input type="radio" name="q15" value="d"> CardView</label>
+    </div>
+    <div class="result" id="result15"></div>
+</div>
+
+<!-- Lecture 6: Dialogs -->
+<div class="question" data-lecture="Lecture 6">
+    <h3>16. Which dialog is used to display a progress bar?</h3>
+    <div class="options">
+        <label><input type="radio" name="q16" value="a"> AlertDialog</label>
+        <label><input type="radio" name="q16" value="b"> ProgressDialog</label>
+        <label><input type="radio" name="q16" value="c"> DatePickerDialog</label>
+        <label><input type="radio" name="q16" value="d"> TimePickerDialog</label>
+    </div>
+    <div class="result" id="result16"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 6">
+    <h3>17. Which method is used to create a dialog in Android?</h3>
+    <div class="options">
+        <label><input type="radio" name="q17" value="a"> `onCreateDialog()`</label>
+        <label><input type="radio" name="q17" value="b"> `onCreateView()`</label>
+        <label><input type="radio" name="q17" value="c"> `onCreate()`</label>
+        <label><input type="radio" name="q17" value="d"> `onCreateOptionsMenu()`</label>
+    </div>
+    <div class="result" id="result17"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 6">
+    <h3>18. Which dialog type is used to select a date?</h3>
+    <div class="options">
+        <label><input type="radio" name="q18" value="a"> AlertDialog</label>
+        <label><input type="radio" name="q18" value="b"> ProgressDialog</label>
+        <label><input type="radio" name="q18" value="c"> DatePickerDialog</label>
+        <label><input type="radio" name="q18" value="d"> TimePickerDialog</label>
+    </div>
+    <div class="result" id="result18"></div>
+</div>
+
+<!-- Lecture 7: Input Handling -->
+<div class="question" data-lecture="Lecture 7">
+    <h3>19. Which listener is used to handle key events in Android?</h3>
+    <div class="options">
+        <label><input type="radio" name="q19" value="a"> `OnKeyListener`</label>
+        <label><input type="radio" name="q19" value="b"> `OnTouchListener`</label>
+        <label><input type="radio" name="q19" value="c"> `OnClickListener`</label>
+        <label><input type="radio" name="q19" value="d"> `OnLongClickListener`</label>
+    </div>
+    <div class="result" id="result19"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 7">
+    <h3>20. Which method is used to handle touch events in Android?</h3>
+    <div class="options">
+        <label><input type="radio" name="q20" value="a"> `onTouch()`</label>
+        <label><input type="radio" name="q20" value="b"> `onClick()`</label>
+        <label><input type="radio" name="q20" value="c"> `onKeyDown()`</label>
+        <label><input type="radio" name="q20" value="d"> `onTrackballEvent()`</label>
+    </div>
+    <div class="result" id="result20"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 7">
+    <h3>21. Which sensor measures the rate of rotation around the device's axes?</h3>
+    <div class="options">
+        <label><input type="radio" name="q21" value="a"> Accelerometer</label>
+        <label><input type="radio" name="q21" value="b"> Gyroscope</label>
+        <label><input type="radio" name="q21" value="c"> Proximity Sensor</label>
+        <label><input type="radio" name="q21" value="d"> Light Sensor</label>
+    </div>
+    <div class="result" id="result21"></div>
+</div>
+
+<!-- Lecture 8: Permissions -->
+<div class="question" data-lecture="Lecture 8">
+    <h3>22. Which type of permission requires explicit user approval?</h3>
+    <div class="options">
+        <label><input type="radio" name="q22" value="a"> Normal Permissions</label>
+        <label><input type="radio" name="q22" value="b"> Dangerous Permissions</label>
+        <label><input type="radio" name="q22" value="c"> Both</label>
+        <label><input type="radio" name="q22" value="d"> None</label>
+    </div>
+    <div class="result" id="result22"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 8">
+    <h3>23. Which permission is required to access the camera?</h3>
+    <div class="options">
+        <label><input type="radio" name="q23" value="a"> `READ_CONTACTS`</label>
+        <label><input type="radio" name="q23" value="b"> `CAMERA`</label>
+        <label><input type="radio" name="q23" value="c"> `RECORD_AUDIO`</label>
+        <label><input type="radio" name="q23" value="d"> `ACCESS_FINE_LOCATION`</label>
+    </div>
+    <div class="result" id="result23"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 8">
+    <h3>24. Which permission is automatically granted at installation?</h3>
+    <div class="options">
+        <label><input type="radio" name="q24" value="a"> Normal Permissions</label>
+        <label><input type="radio" name="q24" value="b"> Dangerous Permissions</label>
+        <label><input type="radio" name="q24" value="c"> Both</label>
+        <label><input type="radio" name="q24" value="d"> None</label>
+    </div>
+    <div class="result" id="result24"></div>
+</div>
+
+<!-- Lecture 9: Firebase -->
+<div class="question" data-lecture="Lecture 9">
+    <h3>25. Which Firebase product is used for real-time database synchronization?</h3>
+    <div class="options">
+        <label><input type="radio" name="q25" value="a"> Firestore</label>
+        <label><input type="radio" name="q25" value="b"> Realtime Database</label>
+        <label><input type="radio" name="q25" value="c"> Cloud Storage</label>
+        <label><input type="radio" name="q25" value="d"> Authentication</label>
+    </div>
+    <div class="result" id="result25"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 9">
+    <h3>26. Which Firebase product is used for crash reporting?</h3>
+    <div class="options">
+        <label><input type="radio" name="q26" value="a"> Crashlytics</label>
+        <label><input type="radio" name="q26" value="b"> Analytics</label>
+        <label><input type="radio" name="q26" value="c"> Cloud Messaging</label>
+        <label><input type="radio" name="q26" value="d"> Remote Config</label>
+    </div>
+    <div class="result" id="result26"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 9">
+    <h3>27. Which Firebase product is used for user authentication?</h3>
+    <div class="options">
+        <label><input type="radio" name="q27" value="a"> Firestore</label>
+        <label><input type="radio" name="q27" value="b"> Realtime Database</label>
+        <label><input type="radio" name="q27" value="c"> Authentication</label>
+        <label><input type="radio" name="q27" value="d"> Cloud Storage</label>
+    </div>
+    <div class="result" id="result27"></div>
+</div>
+
+<!-- Lecture 10: Saving Data -->
+<div class="question" data-lecture="Lecture 10">
+    <h3>28. Which method is used to save temporary data in Android?</h3>
+    <div class="options">
+        <label><input type="radio" name="q28" value="a"> `onSaveInstanceState()`</label>
+        <label><input type="radio" name="q28" value="b"> `onRestoreInstanceState()`</label>
+        <label><input type="radio" name="q28" value="c"> `onCreate()`</label>
+        <label><input type="radio" name="q28" value="d"> `onPause()`</label>
+    </div>
+    <div class="result" id="result28"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 10">
+    <h3>29. Which method is used to store data permanently in Android?</h3>
+    <div class="options">
+        <label><input type="radio" name="q29" value="a"> `SharedPreferences`</label>
+        <label><input type="radio" name="q29" value="b"> `Bundle`</label>
+        <label><input type="radio" name="q29" value="c"> `onSaveInstanceState()`</label>
+        <label><input type="radio" name="q29" value="d"> `onRestoreInstanceState()`</label>
+    </div>
+    <div class="result" id="result29"></div>
+</div>
+
+<div class="question" data-lecture="Lecture 10">
+    <h3>30. Which method is used to retrieve data from `SharedPreferences`?</h3>
+    <div class="options">
+        <label><input type="radio" name="q30" value="a"> `getPreferences()`</label>
+        <label><input type="radio" name="q30" value="b"> `getSharedPreferences()`</label>
+        <label><input type="radio" name="q30" value="c"> `getString()`</label>
+        <label><input type="radio" name="q30" value="d"> All of the above</label>
+    </div>
+    <div class="result" id="result30"></div>
+</div>
+<!-- Essay Question 1: Display Lists of Data -->
+<div class="essay-question" data-lecture="Lecture 5">
+    <h3>Essay Question 1: Display Lists of Data</h3>
+    <p>Explain the difference between `ListView` and `RecyclerView` in Android. Provide an example of how you would implement a `RecyclerView` to display a list of items, including the necessary adapters and layout managers.</p>
+    <textarea placeholder="Type your answer here..."></textarea>
+    <div class="result" id="essayResult1"></div>
+</div>
+
+<!-- Essay Question 2: Activity Lifecycle -->
+<div class="essay-question" data-lecture="Lecture 3">
+    <h3>Essay Question 2: Activity Lifecycle</h3>
+    <p>Describe the Android Activity lifecycle. Explain the purpose of each lifecycle method (`onCreate()`, `onStart()`, `onResume()`, `onPause()`, `onStop()`, `onDestroy()`, and `onRestart()`). Provide an example scenario where understanding the lifecycle is crucial for proper app functionality.</p>
+    <textarea placeholder="Type your answer here..."></textarea>
+    <div class="result" id="essayResult2"></div>
+</div>
+    <!-- Submit Button -->
+    <button onclick="checkAnswers()">Check Answers</button>
+
+    <script>
+        // Correct answers for multiple-choice questions
+        const correctAnswers = {
+            q1: "b",
+            q2: "d",
+            q3: "b"
+            // Add more correct answers here (up to 30)
+        };
+
+        // Function to check answers
+        function checkAnswers() {
+            // Check multiple-choice questions
+            for (let i = 1; i <= 3; i++) { // Adjust the loop limit based on the number of questions
+                const question = document.querySelector(`input[name="q${i}"]:checked`);
+                const resultDiv = document.getElementById(`result${i}`);
+                const lecture = document.querySelector(`.question[data-lecture]`).getAttribute("data-lecture");
+
+                if (question) {
+                    if (question.value === correctAnswers[`q${i}`]) {
+                        resultDiv.innerHTML = `<span class="correct">Correct!</span> (Lecture: ${lecture})`;
+                    } else {
+                        resultDiv.innerHTML = `<span class="wrong">Incorrect!</span> (Lecture: ${lecture})`;
+                    }
+                } else {
+                    resultDiv.innerHTML = `<span class="wrong">No answer selected!</span> (Lecture: ${lecture})`;
+                }
+            }
+
+            // Check essay questions (no automatic grading)
+            const essay1 = document.querySelector('.essay-question textarea').value;
+            const essay2 = document.querySelectorAll('.essay-question textarea')[1].value;
+
+            if (essay1.trim() === "") {
+                document.getElementById('essayResult1').innerHTML = `<span class="wrong">No answer provided for Essay 1!</span>`;
+            } else {
+                document.getElementById('essayResult1').innerHTML = `<span class="correct">Essay 1 submitted!</span>`;
+            }
+
+            if (essay2.trim() === "") {
+                document.getElementById('essayResult2').innerHTML = `<span class="wrong">No answer provided for Essay 2!</span>`;
+            } else {
+                document.getElementById('essayResult2').innerHTML = `<span class="correct">Essay 2 submitted!</span>`;
+            }
+        }
+    </script>
+</body>
+</html>
