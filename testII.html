@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Programming Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-weight: bold;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            display: none;
+        }
+        .result h3 {
+            color: #2e7d32;
+        }
+        .review {
+            margin-top: 10px;
+            color: #d32f2f;
+        }
+        .code {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mobile Programming Exam</h1>
+        <h2>Section 1: Multiple Choice Questions</h2>
+
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. What is the minimum attendance percentage required to sit for the final exam?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> a) 70%</label>
+                <label><input type="radio" name="q1" value="b"> b) 80%</label>
+                <label><input type="radio" name="q1" value="c"> c) 90%</label>
+                <label><input type="radio" name="q1" value="d"> d) 100%</label>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. Which of the following is NOT a type of mobile application?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> a) Native Apps</label>
+                <label><input type="radio" name="q2" value="b"> b) Hybrid Apps</label>
+                <label><input type="radio" name="q2" value="c"> c) Web Apps</label>
+                <label><input type="radio" name="q2" value="d"> d) Desktop Apps</label>
+            </div>
+        </div>
+
+        <!-- Add more questions here -->
+
+        <h2>Section 2: Event Scenarios (20 Scenarios)</h2>
+
+        <!-- Scenario 1 -->
+        <div class="question">
+            <p>3. You are developing an Android app where users can edit their profile. The user opens the profile editing screen, makes some changes, and then receives a phone call. What lifecycle methods will be called when the phone call interrupts the app?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a"> a) onPause() and onStop()</label>
+                <label><input type="radio" name="q3" value="b"> b) onResume() and onStart()</label>
+                <label><input type="radio" name="q3" value="c"> c) onDestroy() and onCreate()</label>
+                <label><input type="radio" name="q3" value="d"> d) onRestart() and onResume()</label>
+            </div>
+        </div>
+
+        <!-- Scenario 2 -->
+        <div class="question">
+            <p>4. After the phone call ends, the user returns to the app. Which lifecycle methods will be called?</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a"> a) onRestart() and onStart()</label>
+                <label><input type="radio" name="q4" value="b"> b) onResume() and onPause()</label>
+                <label><input type="radio" name="q4" value="c"> c) onCreate() and onStart()</label>
+                <label><input type="radio" name="q4" value="d"> d) onDestroy() and onCreate()</label>
+            </div>
+        </div>
+
+        <!-- Scenario 3 -->
+        <div class="question">
+            <p>5. You are designing a login screen with two input fields (username and password) and a login button. You want the button to be centered below the input fields with a 10dp margin. Which layout should you use?</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a"> a) LinearLayout with vertical orientation</label>
+                <label><input type="radio" name="q5" value="b"> b) RelativeLayout</label>
+                <label><input type="radio" name="q5" value="c"> c) ConstraintLayout</label>
+                <label><input type="radio" name="q5" value="d"> d) FrameLayout</label>
+            </div>
+        </div>
+
+        <!-- Scenario 4 -->
+        <div class="question">
+            <p>6. You want to ensure that the login button is always 20dp away from the bottom of the password field. Which attribute should you use in `ConstraintLayout`?</p>
+            <div class="options">
+                <label><input type="radio" name="q6" value="a"> a) android:layout_marginTop="20dp"</label>
+                <label><input type="radio" name="q6" value="b"> b) android:layout_marginBottom="20dp"</label>
+                <label><input type="radio" name="q6" value="c"> c) app:layout_constraintTop_toBottomOf="@id/passwordField"</label>
+                <label><input type="radio" name="q6" value="d"> d) app:layout_constraintBottom_toTopOf="@id/passwordField"</label>
+            </div>
+        </div>
+
+        <!-- Scenario 5 -->
+        <div class="question">
+            <p>7. You are building a news app that displays a list of articles. Each article has a title, image, and short description. Which widget would be the best choice for displaying this list?</p>
+            <div class="options">
+                <label><input type="radio" name="q7" value="a"> a) ListView</label>
+                <label><input type="radio" name="q7" value="b"> b) RecyclerView</label>
+                <label><input type="radio" name="q7" value="c"> c) Spinner</label>
+                <label><input type="radio" name="q7" value="d"> d) GridView</label>
+            </div>
+        </div>
+
+        <!-- Scenario 6 -->
+        <div class="question">
+            <p>8. You want to add a feature where users can swipe left to delete an article from the list. Which class should you use to implement this functionality?</p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="a"> a) ItemTouchHelper</label>
+                <label><input type="radio" name="q8" value="b"> b) RecyclerView.Adapter</label>
+                <label><input type="radio" name="q8" value="c"> c) ListView</label>
+                <label><input type="radio" name="q8" value="d"> d) ArrayAdapter</label>
+            </div>
+        </div>
+
+        <!-- Scenario 7 -->
+        <div class="question">
+            <p>9. You are developing a game app, and when the user wins a level, you want to display a dialog with two options: "Next Level" and "Quit." Which type of dialog should you use?</p>
+            <div class="options">
+                <label><input type="radio" name="q9" value="a"> a) ProgressDialog</label>
+                <label><input type="radio" name="q9" value="b"> b) AlertDialog</label>
+                <label><input type="radio" name="q9" value="c"> c) DatePickerDialog</label>
+                <label><input type="radio" name="q9" value="d"> d) TimePickerDialog</label>
+            </div>
+        </div>
+
+        <!-- Scenario 8 -->
+        <div class="question">
+            <p>10. You want to ensure that the user cannot dismiss the dialog by pressing the back button. Which method should you call when building the dialog?</p>
+            <div class="options">
+                <label><input type="radio" name="q10" value="a"> a) setCancelable(false)</label>
+                <label><input type="radio" name="q10" value="b"> b) setCanceledOnTouchOutside(false)</label>
+                <label><input type="radio" name="q10" value="c"> c) setPositiveButton()</label>
+                <label><input type="radio" name="q10" value="d"> d) setNegativeButton()</label>
+            </div>
+        </div>
+
+        <!-- Scenario 9 -->
+        <div class="question">
+            <p>11. You are developing a drawing app where users can draw on the screen using their fingers. Which listener should you use to capture touch events?</p>
+            <div class="options">
+                <label><input type="radio" name="q11" value="a"> a) OnClickListener</label>
+                <label><input type="radio" name="q11" value="b"> b) OnTouchListener</label>
+                <label><input type="radio" name="q11" value="c"> c) OnKeyListener</label>
+                <label><input type="radio" name="q11" value="d"> d) OnLongClickListener</label>
+            </div>
+        </div>
+
+        <!-- Scenario 10 -->
+        <div class="question">
+            <p>12. You want to detect when the user lifts their finger from the screen. Which `MotionEvent` action should you check for?</p>
+            <div class="options">
+                <label><input type="radio" name="q12" value="a"> a) ACTION_DOWN</label>
+                <label><input type="radio" name="q12" value="b"> b) ACTION_UP</label>
+                <label><input type="radio" name="q12" value="c"> c) ACTION_MOVE</label>
+                <label><input type="radio" name="q12" value="d"> d) ACTION_CANCEL</label>
+            </div>
+        </div>
+
+        <!-- Scenario 11 -->
+        <div class="question">
+            <p>13. You are developing a fitness app that tracks the user's steps using the device's sensors. Which sensor should you use to detect steps?</p>
+            <div class="options">
+                <label><input type="radio" name="q13" value="a"> a) Accelerometer</label>
+                <label><input type="radio" name="q13" value="b"> b) Gyroscope</label>
+                <label><input type="radio" name="q13" value="c"> c) Proximity Sensor</label>
+                <label><input type="radio" name="q13" value="d"> d) Light Sensor</label>
+            </div>
+        </div>
+
+        <!-- Scenario 12 -->
+        <div class="question">
+            <p>14. You want to store user preferences such as theme settings (light/dark mode) in your app. Which storage method should you use?</p>
+            <div class="options">
+                <label><input type="radio" name="q14" value="a"> a) SharedPreferences</label>
+                <label><input type="radio" name="q14" value="b"> b) SQLite Database</label>
+                <label><input type="radio" name="q14" value="c"> c) Firebase Realtime Database</label>
+                <label><input type="radio" name="q14" value="d"> d) Bundle</label>
+            </div>
+        </div>
+
+        <!-- Scenario 13 -->
+        <div class="question">
+            <p>15. You are developing a chat app and want to send push notifications to users when they receive a new message. Which Firebase service should you use?</p>
+            <div class="options">
+                <label><input type="radio" name="q15" value="a"> a) Firebase Authentication</label>
+                <label><input type="radio" name="q15" value="b"> b) Firebase Cloud Messaging</label>
+                <label><input type="radio" name="q15" value="c"> c) Firebase Firestore</label>
+                <label><input type="radio" name="q15" value="d"> d) Firebase Storage</label>
+            </div>
+        </div>
+
+        <!-- Scenario 14 -->
+        <div class="question">
+            <p>16. You want to implement user authentication in your app using email and password. Which Firebase service should you use?</p>
+            <div class="options">
+                <label><input type="radio" name="q16" value="a"> a) Firebase Authentication</label>
+                <label><input type="radio" name="q16" value="b"> b) Firebase Cloud Messaging</label>
+                <label><input type="radio" name="q16" value="c"> c) Firebase Firestore</label>
+                <label><input type="radio" name="q16" value="d"> d) Firebase Storage</label>
+            </div>
+        </div>
+
+        <!-- Scenario 15 -->
+        <div class="question">
+            <p>17. You are developing an e-commerce app and want to store product details such as name, price, and description. Which database should you use?</p>
+            <div class="options">
+                <label><input type="radio" name="q17" value="a"> a) SQLite Database</label>
+                <label><input type="radio" name="q17" value="b"> b) Firebase Realtime Database</label>
+                <label><input type="radio" name="q17" value="c"> c) SharedPreferences</label>
+                <label><input type="radio" name="q17" value="d"> d) Bundle</label>
+            </div>
+        </div>
+
+        <!-- Scenario 16 -->
+        <div class="question">
+            <p>18. You want to implement a feature where users can upload profile pictures. Which Firebase service should you use?</p>
+            <div class="options">
+                <label><input type="radio" name="q18" value="a"> a) Firebase Authentication</label>
+                <label><input type="radio" name="q18" value="b"> b) Firebase Cloud Messaging</label>
+                <label><input type="radio" name="q18" value="c"> c) Firebase Firestore</label>
+                <label><input type="radio" name="q18" value="d"> d) Firebase Storage</label>
+            </div>
+        </div>
+
+        <!-- Scenario 17 -->
+        <div class="question">
+            <p>19. You are developing a news app and want to display articles in a grid format. Which widget should you use?</p>
+            <div class="options">
+                <label><input type="radio" name="q19" value="a"> a) ListView</label>
+                <label><input type="radio" name="q19" value="b"> b) RecyclerView</label>
+                <label><input type="radio" name="q19" value="c"> c) GridView</label>
+                <label><input type="radio" name="q19" value="d"> d) Spinner</label>
+            </div>
+        </div>
+
+        <!-- Scenario 18 -->
+        <div class="question">
+            <p>20. You want to implement a feature where users can refresh the list of articles by swiping down. Which class should you use?</p>
+            <div class="options">
+                <label><input type="radio" name="q20" value="a"> a) SwipeRefreshLayout</label>
+                <label><input type="radio" name="q20" value="b"> b) RecyclerView</label>
+                <label><input type="radio" name="q20" value="c"> c) ListView</label>
+                <label><input type="radio" name="q20" value="d"> d) GridView</label>
+            </div>
+        </div>
+
+        <!-- Scenario 19 -->
+        <div class="question">
+            <p>21. You are developing a weather app and want to display the current temperature and weather conditions. Which sensor should you use to detect the device's orientation?</p>
+            <div class="options">
+                <label><input type="radio" name="q21" value="a"> a) Accelerometer</label>
+                <label><input type="radio" name="q21" value="b"> b) Gyroscope</label>
+                <label><input type="radio" name="q21" value="c"> c) Proximity Sensor</label>
+                <label><input type="radio" name="q21" value="d"> d) Light Sensor</label>
+            </div>
+        </div>
+
+        <!-- Scenario 20 -->
+        <div class="question">
+            <p>22. You want to implement a feature where users can share content from your app to other apps. Which class should you use?</p>
+            <div class="options">
+                <label><input type="radio" name="q22" value="a"> a) Intent</label>
+                <label><input type="radio" name="q22" value="b"> b) Fragment</label>
+                <label><input type="radio" name="q22" value="c"> c) Activity</label>
+                <label><input type="radio" name="q22" value="d"> d) Service</label>
+            </div>
+        </div>
+
+        <h2>Section 3: Code Error Detection (4 Questions)</h2>
+
+        <!-- Code Error Question 1 -->
+        <div class="question">
+            <p>23. The following XML code contains an error. Identify the error and provide a solution.</p>
+            <div class="code">
+                &lt;LinearLayout&gt;<br>
+                &nbsp;&nbsp;&lt;TextView<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;android:layout_width="match_parent"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;android:layout_height="match_parent"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;android:text="Welcome" /&gt;<br>
+                &nbsp;&nbsp;&lt;Button<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;android:id="@+id/button_submit"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;android:layout_width="match_parent"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;android:layout_height="wrap_content"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;android:text="Submit" /&gt;<br>
+                &lt;/LinearLayout&gt;
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q23" value="a"> a) Missing `xmlns:android` attribute in LinearLayout</label>
+                <label><input type="radio" name="q23" value="b"> b) Missing `android:orientation` attribute in LinearLayout</label>
+                <label><input type="radio" name="q23" value="c"> c) Button width should be `wrap_content`</label>
+                <label><input type="radio" name="q23" value="d"> d) TextView height should be `wrap_content`</label>
+            </div>
+        </div>
+
+        <!-- Code Error Question 2 -->
+        <div class="question">
+            <p>24. The following Java code contains an error. Identify the error and provide a solution.</p>
+            <div class="code">
+                public class MainActivity extends AppCompatActivity {<br>
+                &nbsp;&nbsp;@Override<br>
+                &nbsp;&nbsp;protected void onCreate(Bundle savedInstanceState) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;super.onCreate(savedInstanceState);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;setContentView(R.layout.activity_main);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Button button = findViewById(R.id.button_submit);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;button.setOnClickListener(new View.OnClickListener() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Override<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void onClick(View v) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toast.makeText(MainActivity.this, "Button Clicked!", Toast.LENGTH_SHORT).show();<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;});<br>
+                &nbsp;&nbsp;}<br>
+                }
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q24" value="a"> a) Missing `import` statements for `Button` and `Toast`</label>
+                <label><input type="radio" name="q24" value="b"> b) `setContentView` should be called after `findViewById`</label>
+                <label><input type="radio" name="q24" value="c"> c) `Toast.makeText` should use `getApplicationContext()`</label>
+                <label><input type="radio" name="q24" value="d"> d) No error in the code</label>
+            </div>
+        </div>
+
+        <!-- Code Error Question 3 -->
+        <div class="question">
+            <p>25. The following Java code contains an error. Identify the error and provide a solution.</p>
+            <div class="code">
+                public class MainActivity extends AppCompatActivity {<br>
+                &nbsp;&nbsp;@Override<br>
+                &nbsp;&nbsp;protected void onCreate(Bundle savedInstanceState) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;super.onCreate(savedInstanceState);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;setContentView(R.layout.activity_main);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;TextView textView = findViewById(R.id.text_view);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;textView.setText("Hello, World!");<br>
+                &nbsp;&nbsp;}<br>
+                }
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q25" value="a"> a) Missing `import` statement for `TextView`</label>
+                <label><input type="radio" name="q25" value="b"> b) `setContentView` should be called after `findViewById`</label>
+                <label><input type="radio" name="q25" value="c"> c) `TextView` ID should be `@+id/textView`</label>
+                <label><input type="radio" name="q25" value="d"> d) No error in the code</label>
+            </div>
+        </div>
+
+        <!-- Code Error Question 4 -->
+        <div class="question">
+            <p>26. The following XML code contains an error. Identify the error and provide a solution.</p>
+            <div class="code">
+                &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"<br>
+                &nbsp;&nbsp;android:layout_width="match_parent"<br>
+                &nbsp;&nbsp;android:layout_height="match_parent"&gt;<br>
+                &nbsp;&nbsp;&lt;Button<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;android:id="@+id/button_submit"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;android:layout_width="wrap_content"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;android:layout_height="wrap_content"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;android:text="Submit" /&gt;<br>
+                &nbsp;&nbsp;&lt;TextView<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;android:id="@+id/text_view"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;android:layout_width="wrap_content"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;android:layout_height="wrap_content"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;android:text="Hello, World!" /&gt;<br>
+                &lt;/RelativeLayout&gt;
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q26" value="a"> a) Missing `android:orientation` attribute</label>
+                <label><input type="radio" name="q26" value="b"> b) `TextView` should be above `Button`</label>
+                <label><input type="radio" name="q26" value="c"> c) `TextView` should have `android:layout_below` attribute</label>
+                <label><input type="radio" name="q26" value="d"> d) No error in the code</label>
+            </div>
+        </div>
+
+        <button onclick="submitExam()">Submit Exam</button>
+
+        <div class="result" id="result">
+            <h3>Your Result:</h3>
+            <p id="score"></p>
+            <div class="review" id="review"></div>
+        </div>
+    </div>
+
+    <script>
+        // Correct answers
+        const correctAnswers = {
+            q1: "b",
+            q2: "d",
+            q3: "a",
+            q4: "a",
+            q5: "c",
+            q6: "b",
+            q7: "b",
+            q8: "a",
+            q9: "b",
+            q10: "a",
+            q11: "b",
+            q12: "b",
+            q13: "a",
+            q14: "a",
+            q15: "b",
+            q16: "a",
+            q17: "b",
+            q18: "d",
+            q19: "c",
+            q20: "a",
+            q21: "b",
+            q22: "a",
+            q23: "b",
+            q24: "a",
+            q25: "a",
+            q26: "c",
+        };
+
+        // Function to calculate the score
+        function submitExam() {
+            let score = 0;
+            let wrongAnswers = [];
+
+            // Check each question
+            for (let i = 1; i <= Object.keys(correctAnswers).length; i++) {
+                const questionName = "q" + i;
+                const selectedAnswer = document.querySelector(`input[name="${questionName}"]:checked`);
+
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === correctAnswers[questionName]) {
+                        score++;
+                    } else {
+                        wrongAnswers.push(i);
+                    }
+                }
+            }
+
+            // Display the result
+            const resultDiv = document.getElementById("result");
+            const scoreText = `You scored ${score} out of ${Object.keys(correctAnswers).length}.`;
+            document.getElementById("score").textContent = scoreText;
+
+            // Display which questions were wrong and what to review
+            if (wrongAnswers.length > 0) {
+                let reviewText = "You need to review the following lectures: ";
+                wrongAnswers.forEach((questionNumber) => {
+                    reviewText += `Lecture ${questionNumber}, `;
+                });
+                document.getElementById("review").textContent = reviewText.slice(0, -2); // Remove the last comma
+            } else {
+                document.getElementById("review").textContent = "Great job! You don't need to review any lectures.";
+            }
+
+            resultDiv.style.display = "block";
+        }
+    </script>
+</body>
+</html>
