@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .question p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+     <!-- مكتبة CryptoJS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <h1>Cybersecurity Exam</h1>
+     <div class="question">
+        <p>Paragraph (A):</p>
+            <p> "In today's interconnected world, where digital technology permeates every aspect of our lives, cybersecurity has emerged as a paramount concern. With the increasing reliance on computers and networks, the potential for cyberattacks has grown exponentially."</p>
+            <p>Paragraph (B):</p>
+            <p>"One of the most prominent advantages of AI is its ability to enhance efficiency and productivity. By automating repetitive tasks and analyzing vast amounts of data, AI can streamline operations and reduce human error."</p>
+            <p>Paragraph (D):</p>
+            <p>"However, the widespread adoption of AI also raises concerns about its potential negative consequences. One of the major drawbacks of AI is the risk of job displacement."</p>
+            
+        </div>
+    <div class="question">
+        <p>1. What is the main idea of paragraph (A)?</p>
+        <div class="options">
+            <label><input type="radio" name="q1" value="a"> a) The benefits of technology</label>
+            <label><input type="radio" name="q1" value="b"> b) The growing threat of cyberattacks</label>
+            <label><input type="radio" name="q1" value="c"> c) How to use computers safely</label>
+            <label><input type="radio" name="q1" value="d"> d) The history of cybersecurity</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>2. What does "interconnected world" imply?</p>
+        <div class="options">
+            <label><input type="radio" name="q2" value="a"> a) A world without technology</label>
+            <label><input type="radio" name="q2" value="b"> b) A world where everything is connected through technology</label>
+            <label><input type="radio" name="q2" value="c"> c) A world with limited communication</label>
+            <label><input type="radio" name="q2" value="d"> d) A world without cybersecurity</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>3. What does "multifaceted challenges" mean?</p>
+        <div class="options">
+            <label><input type="radio" name="q3" value="a"> a) Simple challenges</label>
+            <label><input type="radio" name="q3" value="b"> b) Challenges with many aspects</label>
+            <label><input type="radio" name="q3" value="c"> c) Challenges related to technology</label>
+            <label><input type="radio" name="q3" value="d"> d) Challenges that are easy to solve</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>4. What is the synonym of "reliance" in this context?</p>
+        <div class="options">
+            <label><input type="radio" name="q4" value="a"> a) Independence</label>
+            <label><input type="radio" name="q4" value="b"> b) Dependence</label>
+            <label><input type="radio" name="q4" value="c"> c) Resistance</label>
+            <label><input type="radio" name="q4" value="d"> d) Ignorance</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>5. What is ransomware?</p>
+        <div class="options">
+            <label><input type="radio" name="q5" value="a"> a) Software that protects data</label>
+            <label><input type="radio" name="q5" value="b"> b) Software that encrypts data and demands payment</label>
+            <label><input type="radio" name="q5" value="c"> c) Software that analyzes data</label>
+            <label><input type="radio" name="q5" value="d"> d) Software that deletes data</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>6. What does "pressing threats" mean?</p>
+        <div class="options">
+            <label><input type="radio" name="q6" value="a"> a) Threats that are not important</label>
+            <label><input type="radio" name="q6" value="b"> b) Threats that are urgent and serious</label>
+            <label><input type="radio" name="q6" value="c"> c) Threats that are easy to handle</label>
+            <label><input type="radio" name="q6" value="d"> d) Threats that are outdated</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>7. What is the main idea of paragraph (B)?</p>
+        <div class="options">
+            <label><input type="radio" name="q7" value="a"> a) The benefits of ransomware</label>
+            <label><input type="radio" name="q7" value="b"> b) The threat of ransomware in cybersecurity</label>
+            <label><input type="radio" name="q7" value="c"> c) How to encrypt data</label>
+            <label><input type="radio" name="q7" value="d"> d) The history of ransomware</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>8. What does "sophisticated" mean in this context?</p>
+        <div class="options">
+            <label><input type="radio" name="q8" value="a"> a) Simple</label>
+            <label><input type="radio" name="q8" value="b"> b) Advanced and complex</label>
+            <label><input type="radio" name="q8" value="c"> c) Outdated</label>
+            <label><input type="radio" name="q8" value="d"> d) Easy to detect</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>9. What is phishing?</p>
+        <div class="options">
+            <label><input type="radio" name="q9" value="a"> a) A type of fishing</label>
+            <label><input type="radio" name="q9" value="b"> b) A technique to steal sensitive information</label>
+            <label><input type="radio" name="q9" value="c"> c) A way to protect data</label>
+            <label><input type="radio" name="q9" value="d"> d) A type of malware</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>10. What does "social engineering" mean?</p>
+        <div class="options">
+            <label><input type="radio" name="q10" value="a"> a) Building social networks</label>
+            <label><input type="radio" name="q10" value="b"> b) Manipulating people to reveal confidential information</label>
+            <label><input type="radio" name="q10" value="c"> c) Creating social media platforms</label>
+            <label><input type="radio" name="q10" value="d"> d) Developing software for social use</label>
+        </div>
+    </div>
+
+    <!-- Add your questions here -->
+    <div class="question">
+        <p>11. What is the main idea of paragraph (C)?</p>
+        <div class="options">
+            <label><input type="radio" name="q11" value="a"> a) The benefits of phishing</label>
+            <label><input type="radio" name="q11" value="b"> b) The threat of phishing in cybersecurity</label>
+            <label><input type="radio" name="q11" value="c"> c) How to create phishing emails</label>
+            <label><input type="radio" name="q11" value="d"> d) The history of phishing</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>12. What does "enticing" mean in this context?</p>
+        <div class="options">
+            <label><input type="radio" name="q12" value="a"> a) Discouraging</label>
+            <label><input type="radio" name="q12" value="b"> b) Attracting or tempting</label>
+            <label><input type="radio" name="q12" value="c"> c) Ignoring</label>
+            <label><input type="radio" name="q12" value="d"> d) Blocking</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>13. Which of the following is an example of a denial-of-service attack?</p>
+        <div class="options">
+            <label><input type="radio" name="q13" value="a"> a) Sending phishing emails to steal passwords</label>
+            <label><input type="radio" name="q13" value="b"> b) Overloading a website with traffic to crash it</label>
+            <label><input type="radio" name="q13" value="c"> c) Installing malware on a target’s computer</label>
+            <label><input type="radio" name="q13" value="d"> d) Hijacking user credentials for unauthorized access</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>14. What is a common characteristic of a Trojan horse?</p>
+        <div class="options">
+            <label><input type="radio" name="q14" value="a"> a) It hides inside a seemingly innocent file or program</label>
+            <label><input type="radio" name="q14" value="b"> b) It encrypts the victim's data</label>
+            <label><input type="radio" name="q14" value="c"> c) It requires the user to click on a link to activate it</label>
+            <label><input type="radio" name="q14" value="d"> d) It is sent via SMS</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>15. What does two-factor authentication (2FA) provide?</p>
+        <div class="options">
+            <label><input type="radio" name="q15" value="a"> a) It combines something the user knows with something the user has</label>
+            <label><input type="radio" name="q15" value="b"> b) It is a method of encrypting data</label>
+            <label><input type="radio" name="q15" value="c"> c) It prevents unauthorized users from accessing a device</label>
+            <label><input type="radio" name="q15" value="d"> d) It automatically generates a secure password</label>
+        </div>
+    </div>
+
+    <!-- Questions 16 to 70 -->
+    <div class="question">
+        <p>16. What is the main goal of a firewall?</p>
+        <div class="options">
+            <label><input type="radio" name="q16" value="a"> a) Preventing users from accessing the internet</label>
+            <label><input type="radio" name="q16" value="b"> b) Filtering incoming and outgoing network traffic</label>
+            <label><input type="radio" name="q16" value="c"> c) Storing sensitive data securely</label>
+            <label><input type="radio" name="q16" value="d"> d) Encrypting communication between devices</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>17. What is the best way to protect against phishing attacks?</p>
+        <div class="options">
+            <label><input type="radio" name="q17" value="a"> a) Ignoring emails from unknown senders</label>
+            <label><input type="radio" name="q17" value="b"> b) Using email filters to block suspicious messages</label>
+            <label><input type="radio" name="q17" value="c"> c) Clicking on links to check if they are safe</label>
+            <label><input type="radio" name="q17" value="d"> d) Responding to emails asking for confirmation of account information</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>18. What is the function of encryption in cybersecurity?</p>
+        <div class="options">
+            <label><input type="radio" name="q18" value="a"> a) To prevent unauthorized access to data</label>
+            <label><input type="radio" name="q18" value="b"> b) To compress data for storage</label>
+            <label><input type="radio" name="q18" value="c"> c) To make data easier to access</label>
+            <label><input type="radio" name="q18" value="d"> d) To improve the performance of a computer system</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>19. What is a VPN used for?</p>
+        <div class="options">
+            <label><input type="radio" name="q19" value="a"> a) Protecting against malware</label>
+            <label><input type="radio" name="q19" value="b"> b) Creating a secure connection over a public network</label>
+            <label><input type="radio" name="q19" value="c"> c) Encrypting files on a hard drive</label>
+            <label><input type="radio" name="q19" value="d"> d) Preventing unauthorized physical access to computers</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>20. Which of the following is an example of a cybersecurity threat?</p>
+        <div class="options">
+            <label><input type="radio" name="q20" value="a"> a) A computer malfunction</label>
+            <label><input type="radio" name="q20" value="b"> b) A virus that corrupts files</label>
+            <label><input type="radio" name="q20" value="c"> c) A printer error</label>
+            <label><input type="radio" name="q20" value="d"> d) A software upgrade</label>
+        </div>
+    </div>
+    <div class="question">
+        <p>21. What is the main purpose of a DDoS attack?</p>
+        <div class="options">
+            <label><input type="radio" name="q21" value="a"> a) To steal sensitive information from a user</label>
+            <label><input type="radio" name="q21" value="b"> b) To crash a server or website by overwhelming it with traffic</label>
+            <label><input type="radio" name="q21" value="c"> c) To intercept communications between two devices</label>
+            <label><input type="radio" name="q21" value="d"> d) To gain unauthorized access to a network</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>22. Which of the following is a common method used in a man-in-the-middle attack?</p>
+        <div class="options">
+            <label><input type="radio" name="q22" value="a"> a) Exploiting a vulnerability in an operating system</label>
+            <label><input type="radio" name="q22" value="b"> b) Intercepting communications between two parties</label>
+            <label><input type="radio" name="q22" value="c"> c) Gaining access to a user's social media accounts</label>
+            <label><input type="radio" name="q22" value="d"> d) Stealing data from an unencrypted backup file</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>23. What does the term 'social engineering' refer to in cybersecurity?</p>
+        <div class="options">
+            <label><input type="radio" name="q23" value="a"> a) Creating complex encryption algorithms</label>
+            <label><input type="radio" name="q23" value="b"> b) Manipulating people to gain access to sensitive information</label>
+            <label><input type="radio" name="q23" value="c"> c) Developing anti-malware software</label>
+            <label><input type="radio" name="q23" value="d"> d) Installing security patches on systems</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>24. Which of the following is a characteristic of ransomware?</p>
+        <div class="options">
+            <label><input type="radio" name="q24" value="a"> a) It spreads through email attachments and encrypts files</label>
+            <label><input type="radio" name="q24" value="b"> b) It steals credit card information from online transactions</label>
+            <label><input type="radio" name="q24" value="c"> c) It monitors network traffic for sensitive data</label>
+            <label><input type="radio" name="q24" value="d"> d) It disables antivirus software on a system</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>25. What is an example of a strong password?</p>
+        <div class="options">
+            <label><input type="radio" name="q25" value="a"> a) password123</label>
+            <label><input type="radio" name="q25" value="b"> b) 123456789</label>
+            <label><input type="radio" name="q25" value="c"> c) !Q2w#E4r$T9y</label>
+            <label><input type="radio" name="q25" value="d"> d) admin</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>26. What does the term 'zero-day vulnerability' mean?</p>
+        <div class="options">
+            <label><input type="radio" name="q26" value="a"> a) A vulnerability that has been publicly disclosed and patched</label>
+            <label><input type="radio" name="q26" value="b"> b) A vulnerability that has no known exploit</label>
+            <label><input type="radio" name="q26" value="c"> c) A vulnerability that exists on a system before its release</label>
+            <label><input type="radio" name="q26" value="d"> d) A vulnerability that is exploited before the vendor can release a patch</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>27. What is a key characteristic of a worm in cybersecurity?</p>
+        <div class="options">
+            <label><input type="radio" name="q27" value="a"> a) It requires a host to spread</label>
+            <label><input type="radio" name="q27" value="b"> b) It is a self-replicating malware that spreads through networks</label>
+            <label><input type="radio" name="q27" value="c"> c) It steals passwords from websites</label>
+            <label><input type="radio" name="q27" value="d"> d) It exploits software vulnerabilities on a device</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>28. Which of the following is a form of network attack?</p>
+        <div class="options">
+            <label><input type="radio" name="q28" value="a"> a) Man-in-the-middle attack</label>
+            <label><input type="radio" name="q28" value="b"> b) Brute force attack</label>
+            <label><input type="radio" name="q28" value="c"> c) SQL injection</label>
+            <label><input type="radio" name="q28" value="d"> d) All of the above</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>29. What is the main purpose of a vulnerability scanner?</p>
+        <div class="options">
+            <label><input type="radio" name="q29" value="a"> a) To detect and fix software bugs</label>
+            <label><input type="radio" name="q29" value="b"> b) To identify security weaknesses in a system</label>
+            <label><input type="radio" name="q29" value="c"> c) To monitor network traffic for suspicious activity</label>
+            <label><input type="radio" name="q29" value="d"> d) To prevent unauthorized access to a network</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>30. What does the principle of least privilege mean?</p>
+        <div class="options">
+            <label><input type="radio" name="q30" value="a"> a) Users should have access only to the resources they need to perform their job</label>
+            <label><input type="radio" name="q30" value="b"> b) Users should have the ability to modify system settings</label>
+            <label><input type="radio" name="q30" value="c"> c) Users should have unrestricted access to all data on the network</label>
+            <label><input type="radio" name="q30" value="d"> d) Users should have no access to the internet</label>
+        </div>
+        </div>
+        <div class="question">
+            <p>31. What is the main goal of an SQL injection attack?</p>
+            <div class="options">
+                <label><input type="radio" name="q31" value="a"> a) To insert malicious code into a database</label>
+                <label><input type="radio" name="q31" value="b"> b) To gain access to a system using social engineering</label>
+                <label><input type="radio" name="q31" value="c"> c) To block access to a website</label>
+                <label><input type="radio" name="q31" value="d"> d) To spread malware across a network</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>32. Which of the following is a common indicator of phishing?</p>
+            <div class="options">
+                <label><input type="radio" name="q32" value="a"> a) The email contains an urgent message and a suspicious link</label>
+                <label><input type="radio" name="q32" value="b"> b) The website is secured with SSL</label>
+                <label><input type="radio" name="q32" value="c"> c) The message includes a valid signature and contact information</label>
+                <label><input type="radio" name="q32" value="d"> d) The email contains no attachments or links</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>33. What does two-factor authentication (2FA) provide?</p>
+            <div class="options">
+                <label><input type="radio" name="q33" value="a"> a) A single password to access an account</label>
+                <label><input type="radio" name="q33" value="b"> b) A combination of something you know and something you have</label>
+                <label><input type="radio" name="q33" value="c"> c) A unique PIN for each login attempt</label>
+                <label><input type="radio" name="q33" value="d"> d) Access to encrypted data only</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>34. What is the primary function of a firewall?</p>
+            <div class="options">
+                <label><input type="radio" name="q34" value="a"> a) To encrypt data on a network</label>
+                <label><input type="radio" name="q34" value="b"> b) To monitor network traffic and block unauthorized access</label>
+                <label><input type="radio" name="q34" value="c"> c) To detect and remove malware from a system</label>
+                <label><input type="radio" name="q34" value="d"> d) To store backup copies of important files</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>35. Which of the following best describes a Trojan horse?</p>
+            <div class="options">
+                <label><input type="radio" name="q35" value="a"> a) A virus that infects mobile devices</label>
+                <label><input type="radio" name="q35" value="b"> b) A type of malware disguised as a legitimate software</label>
+                <label><input type="radio" name="q35" value="c"> c) A self-replicating malware that spreads through email</label>
+                <label><input type="radio" name="q35" value="d"> d) A tool used to monitor user behavior on the internet</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>36. Which of the following is an example of a physical security measure?</p>
+            <div class="options">
+                <label><input type="radio" name="q36" value="a"> a) Encryption of data stored on a device</label>
+                <label><input type="radio" name="q36" value="b"> b) Using strong passwords</label>
+                <label><input type="radio" name="q36" value="c"> c) Installing security cameras around a building</label>
+                <label><input type="radio" name="q36" value="d"> d) Configuring firewalls on a network</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>37. What is the main purpose of penetration testing?</p>
+            <div class="options">
+                <label><input type="radio" name="q37" value="a"> a) To identify potential security weaknesses in a system</label>
+                <label><input type="radio" name="q37" value="b"> b) To monitor network traffic for suspicious activity</label>
+                <label><input type="radio" name="q37" value="c"> c) To secure data stored on a server</label>
+                <label><input type="radio" name="q37" value="d"> d) To remove malware from a device</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>38. What is the difference between a virus and a worm?</p>
+            <div class="options">
+                <label><input type="radio" name="q38" value="a"> a) A virus requires user interaction to spread, while a worm does not</label>
+                <label><input type="radio" name="q38" value="b"> b) A virus spreads through networks, while a worm spreads through email</label>
+                <label><input type="radio" name="q38" value="c"> c) A virus is always harmful, while a worm is not</label>
+                <label><input type="radio" name="q38" value="d"> d) A worm encrypts files, while a virus deletes data</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>39. What does a VPN (Virtual Private Network) do?</p>
+            <div class="options">
+                <label><input type="radio" name="q39" value="a"> a) It provides anonymity by hiding your IP address</label>
+                <label><input type="radio" name="q39" value="b"> b) It speeds up your internet connection</label>
+                <label><input type="radio" name="q39" value="c"> c) It prevents unauthorized access to a website</label>
+                <label><input type="radio" name="q39" value="d"> d) It provides antivirus protection on your device</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>40. What is the function of an IDS (Intrusion Detection System)?</p>
+            <div class="options">
+                <label><input type="radio" name="q40" value="a"> a) To detect and block malicious traffic on a network</label>
+                <label><input type="radio" name="q40" value="b"> b) To monitor user activity and prevent unauthorized access</label>
+                <label><input type="radio" name="q40" value="c"> c) To detect and alert administrators about potential security breaches</label>
+                <label><input type="radio" name="q40" value="d"> d) To block phishing emails and websites</label>
+            </div>
+    </div>
+    <div class="question">
+        <p>41. What is a DDoS attack?</p>
+        <div class="options">
+            <label><input type="radio" name="q41" value="a"> a) A type of malware that infects devices</label>
+            <label><input type="radio" name="q41" value="b"> b) A method of denying access to a website by overwhelming it with traffic</label>
+            <label><input type="radio" name="q41" value="c"> c) A technique for stealing login credentials</label>
+            <label><input type="radio" name="q41" value="d"> d) A security measure used to protect networks</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>42. What does HTTPS stand for?</p>
+        <div class="options">
+            <label><input type="radio" name="q42" value="a"> a) Hypertext Transfer Protocol Secure</label>
+            <label><input type="radio" name="q42" value="b"> b) High Transfer Protocol Secure</label>
+            <label><input type="radio" name="q42" value="c"> c) Hyperlink Transport Protocol Secure</label>
+            <label><input type="radio" name="q42" value="d"> d) Hypertext Transport Protocol Secure</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>43. What is the purpose of encryption in cybersecurity?</p>
+        <div class="options">
+            <label><input type="radio" name="q43" value="a"> a) To protect sensitive data from unauthorized access</label>
+            <label><input type="radio" name="q43" value="b"> b) To monitor network traffic</label>
+            <label><input type="radio" name="q43" value="c"> c) To manage user access to data</label>
+            <label><input type="radio" name="q43" value="d"> d) To optimize network performance</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>44. Which of the following is an example of social engineering?</p>
+        <div class="options">
+            <label><input type="radio" name="q44" value="a"> a) Installing antivirus software on a device</label>
+            <label><input type="radio" name="q44" value="b"> b) Sending an email with a link to a fake login page</label>
+            <label><input type="radio" name="q44" value="c"> c) Encrypting sensitive data on a network</label>
+            <label><input type="radio" name="q44" value="d"> d) Using firewalls to block unauthorized access</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>45. What is a rootkit?</p>
+        <div class="options">
+            <label><input type="radio" name="q45" value="a"> a) A type of malware that gives attackers control of a system</label>
+            <label><input type="radio" name="q45" value="b"> b) A tool for securing computer systems</label>
+            <label><input type="radio" name="q45" value="c"> c) A software used for ethical hacking</label>
+            <label><input type="radio" name="q45" value="d"> d) A network defense mechanism</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>46. What is the main purpose of a CAPTCHA test?</p>
+        <div class="options">
+            <label><input type="radio" name="q46" value="a"> a) To verify the identity of a user</label>
+            <label><input type="radio" name="q46" value="b"> b) To block DDoS attacks</label>
+            <label><input type="radio" name="q46" value="c"> c) To prevent bots from submitting forms</label>
+            <label><input type="radio" name="q46" value="d"> d) To encrypt data in transit</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>47. Which type of attack uses a fake website to steal login credentials?</p>
+        <div class="options">
+            <label><input type="radio" name="q47" value="a"> a) Phishing</label>
+            <label><input type="radio" name="q47" value="b"> b) DDoS</label>
+            <label><input type="radio" name="q47" value="c"> c) SQL Injection</label>
+            <label><input type="radio" name="q47" value="d"> d) Man-in-the-middle</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>48. What does a patch in cybersecurity refer to?</p>
+        <div class="options">
+            <label><input type="radio" name="q48" value="a"> a) A piece of software used to attack systems</label>
+            <label><input type="radio" name="q48" value="b"> b) An update designed to fix vulnerabilities in software</label>
+            <label><input type="radio" name="q48" value="c"> c) A firewall configuration</label>
+            <label><input type="radio" name="q48" value="d"> d) A tool to block malware from entering a system</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>49. What does the principle of least privilege mean in cybersecurity?</p>
+        <div class="options">
+            <label><input type="radio" name="q49" value="a"> a) Users should have access to the maximum amount of resources</label>
+            <label><input type="radio" name="q49" value="b"> b) Users should only have access to the resources they need to perform their tasks</label>
+            <label><input type="radio" name="q49" value="c"> c) Users should be allowed to install software on their devices</label>
+            <label><input type="radio" name="q49" value="d"> d) Users should have unrestricted access to networks</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>50. What is the primary function of an SSL certificate?</p>
+        <div class="options">
+            <label><input type="radio" name="q50" value="a"> a) To verify the identity of a website and encrypt data</label>
+            <label><input type="radio" name="q50" value="b"> b) To block unauthorized access to a website</label>
+            <label><input type="radio" name="q50" value="c"> c) To store encrypted data on a server</label>
+            <label><input type="radio" name="q50" value="d"> d) To prevent phishing attacks</label>
+        </div>
+    </div>
+    <div class="question">
+        <p>51. What is a Trojan horse in cybersecurity?</p>
+        <div class="options">
+            <label><input type="radio" name="q51" value="a"> a) A type of malware that hides inside legitimate software</label>
+            <label><input type="radio" name="q51" value="b"> b) A method of securing a system against unauthorized access</label>
+            <label><input type="radio" name="q51" value="c"> c) A tool used for ethical hacking</label>
+            <label><input type="radio" name="q51" value="d"> d) A device used to monitor network traffic</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>52. What is the purpose of a firewall in cybersecurity?</p>
+        <div class="options">
+            <label><input type="radio" name="q52" value="a"> a) To monitor internet browsing activity</label>
+            <label><input type="radio" name="q52" value="b"> b) To prevent unauthorized access to or from a network</label>
+            <label><input type="radio" name="q52" value="c"> c) To encrypt sensitive data during transmission</label>
+            <label><input type="radio" name="q52" value="d"> d) To identify potential threats within a system</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>53. Which of the following is an example of a brute force attack?</p>
+        <div class="options">
+            <label><input type="radio" name="q53" value="a"> a) Using malware to steal passwords</label>
+            <label><input type="radio" name="q53" value="b"> b) Trying all possible combinations of passwords to gain access</label>
+            <label><input type="radio" name="q53" value="c"> c) Phishing for login credentials</label>
+            <label><input type="radio" name="q53" value="d"> d) Intercepting data transmitted over a network</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>54. What does the term 'patch management' refer to in cybersecurity?</p>
+        <div class="options">
+            <label><input type="radio" name="q54" value="a"> a) The process of monitoring and responding to security incidents</label>
+            <label><input type="radio" name="q54" value="b"> b) The practice of regularly updating software to fix vulnerabilities</label>
+            <label><input type="radio" name="q54" value="c"> c) The process of securing network communications</label>
+            <label><input type="radio" name="q54" value="d"> d) The technique of using encryption to protect data</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>55. What is the purpose of multi-factor authentication?</p>
+        <div class="options">
+            <label><input type="radio" name="q55" value="a"> a) To make login faster and easier</label>
+            <label><input type="radio" name="q55" value="b"> b) To require two or more methods of verifying identity</label>
+            <label><input type="radio" name="q55" value="c"> c) To store user credentials securely</label>
+            <label><input type="radio" name="q55" value="d"> d) To allow users to reset their passwords automatically</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>56. What is the primary function of a VPN?</p>
+        <div class="options">
+            <label><input type="radio" name="q56" value="a"> a) To prevent unauthorized users from accessing a network</label>
+            <label><input type="radio" name="q56" value="b"> b) To create a secure connection over the internet</label>
+            <label><input type="radio" name="q56" value="c"> c) To encrypt data stored on a device</label>
+            <label><input type="radio" name="q56" value="d"> d) To monitor internet traffic for malicious activity</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>57. What is the meaning of 'zero-day' vulnerability?</p>
+        <div class="options">
+            <label><input type="radio" name="q57" value="a"> a) A vulnerability that is known to the vendor but has not yet been patched</label>
+            <label><input type="radio" name="q57" value="b"> b) A vulnerability that can be exploited without being detected by antivirus software</label>
+            <label><input type="radio" name="q57" value="c"> c) A vulnerability that is discovered and exploited before the vendor is aware of it</label>
+            <label><input type="radio" name="q57" value="d"> d) A vulnerability that only affects certain types of software</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>58. What is a man-in-the-middle attack?</p>
+        <div class="options">
+            <label><input type="radio" name="q58" value="a"> a) An attack where the attacker intercepts and alters communication between two parties</label>
+            <label><input type="radio" name="q58" value="b"> b) An attack where the attacker uses brute force to crack a password</label>
+            <label><input type="radio" name="q58" value="c"> c) An attack where the attacker causes a denial of service by overwhelming a network</label>
+            <label><input type="radio" name="q58" value="d"> d) An attack where the attacker gains access to a system by exploiting a vulnerability</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>59. What is social engineering in the context of cybersecurity?</p>
+        <div class="options">
+            <label><input type="radio" name="q59" value="a"> a) Using physical security measures to protect data</label>
+            <label><input type="radio" name="q59" value="b"> b) Manipulating individuals into revealing confidential information</label>
+            <label><input type="radio" name="q59" value="c"> c) Encrypting communication to prevent unauthorized access</label>
+            <label><input type="radio" name="q59" value="d"> d) Using software tools to monitor network traffic</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>60. What is the function of an intrusion detection system (IDS)?</p>
+        <div class="options">
+            <label><input type="radio" name="q60" value="a"> a) To prevent unauthorized access to a system</label>
+            <label><input type="radio" name="q60" value="b"> b) To detect and alert on suspicious activity within a network</label>
+            <label><input type="radio" name="q60" value="c"> c) To encrypt sensitive data in transit</label>
+            <label><input type="radio" name="q60" value="d"> d) To create secure communication channels between devices</label>
+        </div>
+    </div>
+    <div class="question">
+        <p>61. What is the main goal of a denial of service (DoS) attack?</p>
+        <div class="options">
+            <label><input type="radio" name="q61" value="a"> a) To steal sensitive information from a system</label>
+            <label><input type="radio" name="q61" value="b"> b) To prevent users from accessing a service or network</label>
+            <label><input type="radio" name="q61" value="c"> c) To install malicious software on a system</label>
+            <label><input type="radio" name="q61" value="d"> d) To monitor network traffic for suspicious activity</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>62. What is the function of a sandbox in cybersecurity?</p>
+        <div class="options">
+            <label><input type="radio" name="q62" value="a"> a) To encrypt data during transmission</label>
+            <label><input type="radio" name="q62" value="b"> b) To isolate and analyze potentially malicious software</label>
+            <label><input type="radio" name="q62" value="c"> c) To prevent unauthorized access to a system</label>
+            <label><input type="radio" name="q62" value="d"> d) To monitor network traffic for signs of attack</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>63. What does 'phishing' refer to in cybersecurity?</p>
+        <div class="options">
+            <label><input type="radio" name="q63" value="a"> a) A technique used to bypass encryption</label>
+            <label><input type="radio" name="q63" value="b"> b) A method of impersonating a legitimate entity to steal sensitive information</label>
+            <label><input type="radio" name="q63" value="c"> c) A method of encrypting emails to ensure privacy</label>
+            <label><input type="radio" name="q63" value="d"> d) A type of brute-force attack on passwords</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>64. Which type of malware can replicate itself and spread to other systems?</p>
+        <div class="options">
+            <label><input type="radio" name="q64" value="a"> a) Trojan</label>
+            <label><input type="radio" name="q64" value="b"> b) Worm</label>
+            <label><input type="radio" name="q64" value="c"> c) Spyware</label>
+            <label><input type="radio" name="q64" value="d"> d) Ransomware</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>65. What does 'encryption' do in cybersecurity?</p>
+        <div class="options">
+            <label><input type="radio" name="q65" value="a"> a) It converts data into a format that is readable by unauthorized users</label>
+            <label><input type="radio" name="q65" value="b"> b) It secures data by converting it into an unreadable format without the proper decryption key</label>
+            <label><input type="radio" name="q65" value="c"> c) It monitors network traffic for suspicious activity</label>
+            <label><input type="radio" name="q65" value="d"> d) It prevents unauthorized access to a system</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>66. What is a 'backdoor' in cybersecurity?</p>
+        <div class="options">
+            <label><input type="radio" name="q66" value="a"> a) A method of encrypting files</label>
+            <label><input type="radio" name="q66" value="b"> b) A secret or unauthorized method of accessing a system</label>
+            <label><input type="radio" name="q66" value="c"> c) A type of firewall that blocks unauthorized access</label>
+            <label><input type="radio" name="q66" value="d"> d) A type of phishing attack</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>67. What is a 'zero-trust' security model?</p>
+        <div class="options">
+            <label><input type="radio" name="q67" value="a"> a) A model that assumes no one inside or outside the network can be trusted by default</label>
+            <label><input type="radio" name="q67" value="b"> b) A model where users do not need to authenticate themselves to access resources</label>
+            <label><input type="radio" name="q67" value="c"> c) A model that uses only password authentication</label>
+            <label><input type="radio" name="q67" value="d"> d) A model that relies solely on physical security measures</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>68. What is 'spam' in the context of email security?</p>
+        <div class="options">
+            <label><input type="radio" name="q68" value="a"> a) Unsolicited or unwanted email, often containing advertisements or malicious links</label>
+            <label><input type="radio" name="q68" value="b"> b) Emails from trusted sources with important information</label>
+            <label><input type="radio" name="q68" value="c"> c) Emails that are encrypted to ensure privacy</label>
+            <label><input type="radio" name="q68" value="d"> d) Emails used to verify the identity of a user</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>69. What is 'ransomware'?</p>
+        <div class="options">
+            <label><input type="radio" name="q69" value="a"> a) A type of malware that locks or encrypts data and demands payment for its release</label>
+            <label><input type="radio" name="q69" value="b"> b) A software used to monitor network traffic</label>
+            <label><input type="radio" name="q69" value="c"> c) A method of blocking unauthorized access to a network</label>
+            <label><input type="radio" name="q69" value="d"> d) A tool used to decrypt data</label>
+        </div>
+    </div>
+    
+    <div class="question">
+        <p>70. What is the purpose of security patch updates?</p>
+        <div class="options">
+            <label><input type="radio" name="q70" value="a"> a) To add new features to a software application</label>
+            <label><input type="radio" name="q70" value="b"> b) To fix security vulnerabilities and improve the software's defense against attacks</label>
+            <label><input type="radio" name="q70" value="c"> c) To make the software faster</label>
+            <label><input type="radio" name="q70" value="d"> d) To make the software compatible with more devices</label>
+        </div>
+    </div>
+    
+
+    <!-- Continue similarly for questions up to 70 -->
+
+    <button onclick="submitExam()">Submit Answers</button>
+    <div class="result" id="result"></div>
+
+    <script>
+        // المفتاح السري
+        const secretKey = "mySecretKey123";
+
+        // الإجابات الصحيحة مشفرة
+        const encryptedAnswers = CryptoJS.AES.encrypt(
+            JSON.stringify({
+                q1: "b", q2: "b", q3: "b", q4: "b", q5: "b", q6: "b",
+                q7: "b", q8: "b", q9: "b", q10: "b", q11: "b", q12: "a",
+                q13: "b", q14: "a", q15: "a", q16: "b", q17: "b", q18: "a",
+                q19: "b", q20: "b", q21: "b", q22: "b", q23: "b", q24: "a",
+                q25: "c", q26: "d", q27: "b", q28: "d", q29: "b", q30: "a",
+                q31: "a", q32: "a", q33: "b", q34: "b", q35: "b", q36: "c",
+                q37: "a", q38: "a", q39: "a", q40: "c",
+                q41: "b", q42: "a", q43: "a", q44: "b", q45: "a", q46: "c",
+                q47: "a", q48: "b", q49: "b", q50: "a",
+                q51: "a", q52: "b", q53: "b", q54: "b", q55: "b", q56: "b",
+                q57: "c", q58: "a", q59: "b", q60: "b", q61: "b", q62: "b",
+                q63: "b", q64: "b", q65: "b", q66: "b", q67: "a", q68: "a",
+                q69: "a", q70: "b"
+            }),
+            secretKey
+        ).toString();
+
+        console.log("Encrypted Answers:", encryptedAnswers); // للتأكد من التشفير
+
+        function submitExam() {
+            let score = 0;
+            const totalQuestions = 70;
+
+            // فك التشفير للحصول على الإجابات
+            const decryptedAnswers = JSON.parse(
+                CryptoJS.AES.decrypt(encryptedAnswers, secretKey).toString(CryptoJS.enc.Utf8)
+            );
+
+            // حساب النتيجة
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selectedAnswer && selectedAnswer.value === decryptedAnswers[`q${i}`]) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `You scored ${score} out of ${totalQuestions}!`;
+        }
+    </script>
+</body>
+</html>
